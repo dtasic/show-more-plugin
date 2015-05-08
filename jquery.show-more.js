@@ -12,7 +12,7 @@
                 minheight: auto,
                 buttontxtmore: "show more",
                 buttontxtless: "show less",
-                buttoncss: "",
+                buttoncss: "defaultcss",
                 animationspeed: auto       
             }, options );        
             
@@ -24,7 +24,6 @@
             var showMoreButton = $("<div />", {
                 id: "showmore-button-"+$this.attr('id'),
                 "class": settings.buttoncss,
-                style: "cursor: pointer; background-color: #999; color: white; text-transform: uppercase; text-align: center; padding: 7px 5px 5px 5px; margin-top: 5px;",
                 click: function() {
                     
                     if ($this.css('max-height') != 'none') {
