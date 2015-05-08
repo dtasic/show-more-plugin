@@ -1,5 +1,10 @@
 (function ( $ ) {
-		
+    
+    /*
+    Plugin: ShowMore
+    author: dtasic@gmail.com
+    */
+    
     $.fn.showMore = function (options) {
         
         "use strict";
