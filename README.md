@@ -31,6 +31,10 @@ $("#your-element").showmore({
   animationspeed: 1500
 });
 
+### Demo ###
+
+https://jsfiddle.net/8eyevhmb/17/
+
 ### Who do I talk to? ###
 
 * dtasic@gmail.com
