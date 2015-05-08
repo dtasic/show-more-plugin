@@ -12,7 +12,7 @@
                 minheight: auto,
                 buttontxtmore: "show more",
                 buttontxtless: "show less",
-                buttoncss: "defaultcss",
+                buttoncss: "showmore-button",
                 animationspeed: auto       
             }, options );        
             
