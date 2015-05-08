@@ -23,6 +23,7 @@ Small Jquery plugin to add Show More button to any div.
 
 example of options:
 
+```
 $("#your-element").showmore({
   minheight: 150, // measured in px
   buttontxtmore: 'show me more content',
@@ -30,6 +31,7 @@ $("#your-element").showmore({
   buttoncss: 'my-custom-css',
   animationspeed: 1500
 });
+```
 
 ### Demo ###
 
