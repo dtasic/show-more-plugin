@@ -11,7 +11,7 @@ Small Jquery plugin to add Show More button to any div.
 
 * add jquery.show-more.js to your page
 * usage: $("#your-element").showmore();
-* Dependencies: jquery
+* Dependencies: jquery 1.6.4 or higher. CSS class named 'showmore-button' or include showmore-default.css
 
 ### Properties ###
 
