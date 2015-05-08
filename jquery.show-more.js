@@ -1,56 +1,47 @@
 (function ( $ ) {
 		
-    $.fn.showMore = function () {
-
-        var $buttonmore = 'pokaži više';
-        var $buttonless = 'pokaži manje';
-        var $this = $(this);
-
-        // build show-more button 
-        var $showMoreButton = $("<div />", {
-            id: "more-less-button",
-            "class": "more-less-button",
-            click: function() {
-
-                $this = $(this);
-
-                var fullheight = $this.prev().children().css('height');
-                var animationspeed = $this.prev().children().css('height');
-                var compressedheight = $this.prev().css('min-height');
-
-                if ($this.text() == $buttonmore){
-                    $this.prev().css('height', compressedheight).toggleClass('nomaxheight');
-                    $this.prev().animate({height:fullheight}, animationspeed, function () {
-                        $this.text($buttonless);
-                    });
-                } else {
-                    $this.prev().animate({height:compressedheight}, animationspeed, function () { 
-                        $this.prev().toggleClass('nomaxheight');
-                        $this.text($buttonmore); 
-                    });
-                }
-
-            },
-            text: $buttonmore
+    $.fn.showMore = function (options) {
+        
+        "use strict";
+        
+        this.each(function(){
+            
+            var $this = $(this);
+            var auto = parseInt($this.innerHeight())/2;
+            var settings = $.extend({
+                minheight: auto,
+                buttontxtmore: "show more",
+                buttontxtless: "show less",
+                buttoncss: "",
+                animationspeed: auto       
+            }, options );        
+            
+            var fullheight = $this.innerHeight();
+          
+            $this.wrap( "<div id='showmore-"+$this.attr('id')+"' data-showmore style='max-width:"+$this.css('width')+";'></div>" );
+            $this.css('min-height', settings.minheight).css('max-height', settings.minheight).css('overflow', 'hidden');
+            
+            var showMoreButton = $("<div />", {
+                id: "showmore-button-"+$this.attr('id'),
+                "class": settings.buttoncss,
+                style: "cursor: pointer; background-color: #999; color: white; text-transform: uppercase; text-align: center; padding: 7px 5px 5px 5px; margin-top: 5px;",
+                click: function() {
+                    
+                    if ($this.css('max-height') != 'none') {
+                        $this.css('height', settings.minheight).css('max-height', '').animate({height:fullheight}, settings.animationspeed, function () { showMoreButton.text(settings.buttontxtless); });
+                    } else {
+                        $this.animate({height:settings.minheight}, settings.animationspeed, function () { showMoreButton.text(settings.buttontxtmore); $this.css('max-height', settings.minheight); });
+                    }
+                },
+                text: settings.buttontxtmore
+            });
+            
+            $this.after(showMoreButton);
+            
         });
-
-        // add button after content DIV inside .show-more wrapper. proverava posebno za svaki show-more da li ima cekiranih polja. Ako ima postavlja visinu na maksimalnu (ignorise button div). Ako je content prazan, skida .show-more i dodaje poruku u content;
-
-        $this.append($showMoreButton);
-
-        if ($this.children().children().height() < parseInt($this.children().css('min-height'))) {
-            $this.children().children().css('min-height', '0');
-            $this.children().remove("#more-less-button");
-            $this.removeClass('show-more');
-        };
-        if ($this.children().children().text().trim().length == 0) { 
-            $this.removeClass('show-more').html('no content'); 
-        };
-        if ($this.find(":checkbox:checked").length !== 0) { 
-            $this.children().not("[class='more-less-button']").css('height', $this.children().children().height()).toggleClass('nomaxheight');
-            $this.find(".more-less-button").text($buttonless);
-        };
-
+        
+        return this;
+        
     };
 
 }(jQuery));
