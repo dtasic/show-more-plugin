@@ -8,10 +8,10 @@
     $.fn.showMore = function (options) {
         
         "use strict";
-		var element = $(this);
         
-        element.each(function(){
-
+        this.each(function(){
+            
+            var element = $(this);
             var auto = parseInt(element.innerHeight())/2;
             var settings = $.extend({
                 minheight: auto,
