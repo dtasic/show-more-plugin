@@ -1,0 +1,23 @@
+{
+  "name": "show-more",
+  "version": "1.0.0",
+  "description": "Add button to any div to show more content on click",
+  "main": "jquery.show-more.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://dtasic@github.com/dtasic/show-more-plugin.git"
+  },
+  "keywords": [
+    "show",
+    "more"
+  ],
+  "author": "Dejan Tasic",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/dtasic/show-more-plugin/issues"
+  },
+  "homepage": "https://github.com/dtasic/show-more-plugin#readme"
+}
