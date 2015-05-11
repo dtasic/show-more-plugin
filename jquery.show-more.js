@@ -8,7 +8,7 @@
     $.fn.showMore = function (options) {
         
         "use strict";
-		var element = this;
+		var element = $(this);
         
         element.each(function(){
 
