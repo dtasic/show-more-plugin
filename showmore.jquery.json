@@ -1,0 +1,27 @@
+{
+    "name": "Show More",
+    "title": "jQuery Show More",
+    "description": "Small Jquery plugin to add Show More button to any div.",
+    "keywords": [
+        "show more",
+        "show",
+        "more",
+        "content"
+    ],
+    "version": "1.0.0",
+    "author": {
+        "name": "Dejan Tasic",
+        "url": "https://github.com/dtasic/"
+    },
+    "licenses": [
+        {
+            "type": "GPL",
+            "url": "https://github.com/jquery/jquery-color/blob/2.1.2/MIT-LICENSE.txt"
+        }
+    ],
+    "homepage": "https://github.com/dtasic/show-more-plugin",
+    "download": "https://raw.githubusercontent.com/dtasic/show-more-plugin/master/jquery.show-more.js",
+    "dependencies": {
+        "jquery": ">=1.6.4"
+    }
+}
