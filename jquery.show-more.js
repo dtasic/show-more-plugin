@@ -9,7 +9,7 @@
         
         "use strict";
         
-        var current = 1;
+        var currentelem = 1;
         
         this.each(function(){
             
@@ -25,7 +25,7 @@
                 animationspeed: auto       
             }, options );        
             
-            element.attr('id') != undefined ? currentid = element.attr('id') : currentid = current;
+            element.attr('id') != undefined ? currentid = element.attr('id') : currentid = currentelem;
             element.wrap( "<div id='showmore-"+currentid+"' data-showmore style='max-width:"+element.css('width')+";'></div>" );
             
             if (element.parent().not('[data-showmore]')) {
@@ -51,7 +51,7 @@
 
                 }
                 
-                current++;
+                currentelem++;
                 
             }
             
