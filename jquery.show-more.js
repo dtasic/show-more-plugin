@@ -9,9 +9,10 @@
         
         "use strict";
         
+        var current = 1;
+        
         this.each(function(){
             
-            var current = 1;
             var currentid = '';
             var element = $(this);
             var auto = parseInt(element.innerHeight())/2;
@@ -25,7 +26,6 @@
             }, options );        
             
             element.attr('id') != undefined ? currentid = element.attr('id') : currentid = current;
-            
             element.wrap( "<div id='showmore-"+currentid+"' data-showmore style='max-width:"+element.css('width')+";'></div>" );
             
             if (element.parent().not('[data-showmore]')) {
@@ -51,9 +51,9 @@
 
                 }
                 
+                current++;
+                
             }
-            
-            current++;
             
         });
         

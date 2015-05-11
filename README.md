@@ -15,11 +15,11 @@ Small Jquery plugin to add Show More button to any div.
 
 ### Properties ###
 
-* minheight (default: auto - half of original div size)
+* minheight (by default it is half of original div size)
 * buttontxtmore (default: 'show more')
 * buttontxtless (default: 'show less')
-* buttoncss (default is empty. add your custom CSS class name to style button)
-* animationspeed (default: auto - half of original div size converted in ms)
+* buttoncss (default is css class named "showmore-button", or you can add your custom CSS class name)
+* animationspeed (by default it is half of original div size converted in ms)
 
 example of options:
 
@@ -28,7 +28,7 @@ $("#your-element").showmore({
   minheight: 150, // measured in px
   buttontxtmore: 'show me more content',
   buttontxtless: 'show me less content',
-  buttoncss: 'my-custom-css',
+  buttoncss: 'my-button-css',
   animationspeed: 1500
 });
 ```
