@@ -11,6 +11,8 @@
         
         this.each(function(){
             
+            var current = 1;
+            var currentid = '';
             var element = $(this);
             var auto = parseInt(element.innerHeight())/2;
             var fullheight = element.innerHeight();
@@ -22,15 +24,17 @@
                 animationspeed: auto       
             }, options );        
             
-            element.wrap( "<div id='showmore-"+element.attr('id')+"' data-showmore style='max-width:"+element.css('width')+";'></div>" );
+            element.attr('id') != undefined ? currentid = element.attr('id') : currentid = current;
+            
+            element.wrap( "<div id='showmore-"+currentid+"' data-showmore style='max-width:"+element.css('width')+";'></div>" );
             
             if (element.parent().not('[data-showmore]')) {
             
                 if (fullheight > settings.minheight) {
-
+                    
                     element.css('min-height', settings.minheight).css('max-height', settings.minheight).css('overflow', 'hidden');
                     var showMoreButton = $("<div />", {
-                        id: "showmore-button-"+element.attr('id'),
+                        id: "showmore-button-"+currentid,
                         "class": settings.buttoncss,
                         click: function() {
 
@@ -48,6 +52,8 @@
                 }
                 
             }
+            
+            current++;
             
         });
         
