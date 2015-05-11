@@ -35,7 +35,7 @@ $("#your-element").showmore({
 
 ### Demo ###
 
-https://jsfiddle.net/8eyevhmb/24/
+https://jsfiddle.net/8eyevhmb/25/
 
 ### Who do I talk to? ###
 
