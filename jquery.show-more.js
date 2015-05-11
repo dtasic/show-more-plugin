@@ -11,8 +11,8 @@
         
         this.each(function(){
             
-            var element = $(this);
-            var auto = parseInt(element.innerHeight())/2;
+            var $this = $(this);
+            var auto = parseInt($this.innerHeight())/2;
             var settings = $.extend({
                 minheight: auto,
                 buttontxtmore: "show more",
@@ -21,26 +21,26 @@
                 animationspeed: auto       
             }, options );        
             
-            var fullheight = element.innerHeight();
+            var fullheight = $this.innerHeight();
           
-            element.wrap( "<div id='showmore-"+element.attr('id')+"' data-showmore style='max-width:"+element.css('width')+";'></div>" );
-            element.css('min-height', settings.minheight).css('max-height', settings.minheight).css('overflow', 'hidden');
+            $this.wrap( "<div id='showmore-"+$this.attr('id')+"' data-showmore style='max-width:"+$this.css('width')+";'></div>" );
+            $this.css('min-height', settings.minheight).css('max-height', settings.minheight).css('overflow', 'hidden');
             
             var showMoreButton = $("<div />", {
-                id: "showmore-button-"+element.attr('id'),
+                id: "showmore-button-"+$this.attr('id'),
                 "class": settings.buttoncss,
                 click: function() {
                     
-                    if (element.css('max-height') != 'none') {
-                        element.css('height', settings.minheight).css('max-height', '').animate({height:fullheight}, settings.animationspeed, function () { showMoreButton.text(settings.buttontxtless); });
+                    if ($this.css('max-height') != 'none') {
+                        $this.css('height', settings.minheight).css('max-height', '').animate({height:fullheight}, settings.animationspeed, function () { showMoreButton.text(settings.buttontxtless); });
                     } else {
-                        element.animate({height:settings.minheight}, settings.animationspeed, function () { showMoreButton.text(settings.buttontxtmore); element.css('max-height', settings.minheight); });
+                        $this.animate({height:settings.minheight}, settings.animationspeed, function () { showMoreButton.text(settings.buttontxtmore); $this.css('max-height', settings.minheight); });
                     }
                 },
                 text: settings.buttontxtmore
             });
             
-            element.after(showMoreButton);
+            $this.after(showMoreButton);
             
         });
         
