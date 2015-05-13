@@ -1,6 +1,6 @@
 {
   "name": "show-more",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add button to any div to show more content on click",
   "main": "jquery.show-more.js",
   "scripts": {
