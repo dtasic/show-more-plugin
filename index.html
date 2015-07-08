@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js" lang="en" >
+    <head>
+        <meta charset="utf-8">
+        <title>Show-More Plugin</title>
+        <link rel="stylesheet" href="showmore-default.css">
+        <style>
+            .my-button-css {
+                cursor: pointer; 
+                background-color: #069; 
+                color: white; 
+                font-family: Verdana, Arial;
+                font-size: 12px;
+                font-weight: bold;
+                text-transform: uppercase; 
+                text-align: center; 
+                padding: 10px 15px 8px 15px; 
+                margin: 5px 0 0 0;
+            }
+        </style>
+    </head>
+    
+    <body>
+    <div id="test" style="width: 300px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar, massa id dictum ornare, nulla sem tristique dui, nec interdum sapien magna at augue. Duis eros purus, sagittis in mattis placerat, pretium sit amet leo. Sed vitae consectetur lacus, et consequat erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec rhoncus lorem eget sapien maximus, quis feugiasavet mi porttitor. Suspendisse ut erat dolor. Phasellus porttitor pretium commodo. Curabitur eget venenatis quam, non tincidunt nisl. Aenean lobortis fermentum imperdiet. Maecenas nec ipsum tellus. Nunc mauris dui, iaculis vel ex sit amet, maximus ultricies diam. Morbi ut mi sed ex bibendum tempus. Quisque lobortis eget sem in dignissim. Donec scelerisque massa vitae lectus imperdiet pellentesque id id purus. Fusce ac est at mi mollis mattis.</div>
+    <br />
+    <div class="custom-css" style="width: 300px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar, massa id dictum ornare, nulla sem tristique dui, nec interdum sapien magna at augue. Duis eros purus, sagittis in mattis placerat, pretium sit amet leo. Sed vitae consectetur lacus, et consequat erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec rhoncus lorem eget sapien maximus, quis feugiasavet mi porttitor. Suspendisse ut erat dolor. Phasellus porttitor pretium commodo. Curabitur eget venenatis quam, non tincidunt nisl. Aenean lobortis fermentum imperdiet. Maecenas nec ipsum tellus. Nunc mauris dui, iaculis vel ex sit amet, maximus ultricies diam. Morbi ut mi sed ex bibendum tempus. Quisque lobortis eget sem in dignissim. Donec scelerisque massa vitae lectus imperdiet pellentesque id id purus. Fusce ac est at mi mollis mattis.</div>
+    <br />
+    <div id="test-last" style="width: 300px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar, massa id dictum ornare, nulla sem tristique dui, nec interdum sapien magna at augue. Duis eros purus, sagittis in mattis placerat, pretium sit amet leo. Sed vitae consectetur lacus, et consequat erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec rhoncus lorem eget sapien maximus, quis feugiasavet mi porttitor. Suspendisse ut erat dolor. Phasellus porttitor pretium commodo. Curabitur eget venenatis quam, non tincidunt nisl. Aenean lobortis fermentum imperdiet. Maecenas nec ipsum tellus. Nunc mauris dui, iaculis vel ex sit amet, maximus ultricies diam. Morbi ut mi sed ex bibendum tempus. Quisque lobortis eget sem in dignissim. Donec scelerisque massa vitae lectus imperdiet pellentesque id id purus. Fusce ac est at mi mollis mattis.</div>
+    <br />
+    <div class="custom-css" style="width: 300px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar, massa id dictum ornare, nulla sem tristique dui, nec interdum sapien magna at augue. Duis eros purus, sagittis in mattis placerat, pretium sit amet leo. Sed vitae consectetur lacus, et consequat erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec rhoncus lorem eget sapien maximus, quis feugiasavet mi porttitor. Suspendisse ut erat dolor. Phasellus porttitor pretium commodo. Curabitur eget venenatis quam, non tincidunt nisl. Aenean lobortis fermentum imperdiet. Maecenas nec ipsum tellus. Nunc mauris dui, iaculis vel ex sit amet, maximus ultricies diam. Morbi ut mi sed ex bibendum tempus. Quisque lobortis eget sem in dignissim. Donec scelerisque massa vitae lectus imperdiet pellentesque id id purus. Fusce ac est at mi mollis mattis.</div>
+
+    <script src="jquery.min.js"></script>
+    <script src="jquery.min.map"></script>
+    <script src="jquery.show-more.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#test').showMore({
+                minheight: 74,
+                buttontxtmore: 'more content',
+                buttontxtless: 'less content',
+                animationspeed: 250
+            });
+
+            $('.custom-css').showMore({
+                minheight: 74,
+                buttontxtmore: 'more content',
+                buttontxtless: 'less content',
+                buttoncss: 'my-button-css',
+                animationspeed: 250
+            });
+
+            $('#test-last').showMore({
+                minheight: 145,
+                buttontxtmore: 'show me more content',
+                buttontxtless: 'show me less content',
+                animationspeed: 750
+            });
+            });
+        </script>
+    </body>
+</html>

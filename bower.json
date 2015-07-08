@@ -1,0 +1,25 @@
+{
+  "name": "show-more",
+  "version": "1.0.1",
+  "homepage": "https://github.com/dtasic/show-more-plugin",
+  "authors": [
+    "Dejan Tasic <dtasic@gmail.com>"
+  ],
+  "description": "Add 'show more content' button on any diw",
+  "main": "jquery.show-more.js",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "show",
+    "more"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
