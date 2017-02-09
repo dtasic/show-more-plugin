@@ -17,6 +17,7 @@
             var element = $(this);
             var auto = parseInt(element.innerHeight())/2;
             var fullheight = element.innerHeight();
+            var maxWidth = element.css('width');
             var settings = $.extend({
                 minheight: auto,
                 buttontxtmore: "show more",
@@ -26,7 +27,7 @@
             }, options );        
             
             element.attr('id') != undefined ? currentid = element.attr('id') : currentid = currentelem;
-            element.wrap( "<div id='showmore-"+currentid+"' data-showmore style='max-width:"+element.css('width')+";'></div>" );
+            element.wrap( "<div id='showmore-"+currentid+"' data-showmore"+(maxWidth ? " style='max-width:"+maxWidth+";'" : "")+"></div>" );
             
             if (element.parent().not('[data-showmore]')) {
             
