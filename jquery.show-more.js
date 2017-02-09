@@ -27,7 +27,7 @@
             }, options );        
             
             element.attr('id') != undefined ? currentid = element.attr('id') : currentid = currentelem;
-            element.wrap( "<div id='showmore-"+currentid+"' data-showmore"+(maxWidth ? " style='max-width:"+maxWidth+";'" : "")+"></div>" );
+            element.wrap( "<div id='showmore-"+currentid+"' data-showmore"+(maxWidth == '0px' ? "" : " style='max-width:"+maxWidth+";'")+"></div>" );
             
             if (element.parent().not('[data-showmore]')) {
             
