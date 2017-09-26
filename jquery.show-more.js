@@ -39,12 +39,12 @@
                         click: function() {
 
                             if (element.css('max-height') != 'none') {
-                                element.css('height', settings.minheight).css('max-height', '').animate({height:fullheight}, settings.animationspeed, function () { showMoreButton.text(settings.buttontxtless); });
+                                element.css('height', settings.minheight).css('max-height', '').animate({height:fullheight}, settings.animationspeed, function () { showMoreButton.html(settings.buttontxtless); });
                             } else {
-                                element.animate({height:settings.minheight}, settings.animationspeed, function () { showMoreButton.text(settings.buttontxtmore); element.css('max-height', settings.minheight); });
+                                element.animate({height:settings.minheight}, settings.animationspeed, function () { showMoreButton.html(settings.buttontxtmore); element.css('max-height', settings.minheight); });
                             }
                         },
-                        text: settings.buttontxtmore
+                        html: settings.buttontxtmore
                     });
 
                     element.after(showMoreButton);
